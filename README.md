@@ -1,5 +1,5 @@
 # CornfieldAnamolyDetection
-Program to find and detect objects in images of cornfields
+Program to find and detect objects in images of cornfields using color segmentation as a primary filter
 
 
 Instructions:
