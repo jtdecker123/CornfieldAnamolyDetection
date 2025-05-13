@@ -148,11 +148,9 @@ for filename in os.listdir(input_folder):
     if filename.lower().endswith((".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff")):
         input_path = os.path.join(input_folder, filename)
         output_path = os.path.join(output_folder, filename)
-        
+        print(f"Processing: {input_path}")
         processed_image, flag = process_image(input_path)
-        end_time = time.time()  # End timing after processing
                 
-        if processed_image is not None:
+        if processed_image is not None and flag is not None:
             cv2.imwrite(output_path, processed_image)
             print(f"Processed and saved: {output_path}, Found Something: {flag}")
-            
